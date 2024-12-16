@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mortgage Calculator</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <div class="container">
+      <div class="calculator">
+          <form>
+
+              <div class="cab">
+                <h1>Mortgage Calculator</h1>
+                <button>Clear All</button>
+              </div>
+
+              <div class="valor">
+                <label for="amount">Mortgage Amount</label>
+                <input type="number" id="amount" placeholder="£" step="0.01">
+              </div>
+      
+              <div class="dados">
+
+                <div class="anos">
+                  <label for="term">Mortgage Term</label>
+                  <input type="number" id="term" placeholder="years">
+                </div>
+                
+                <div class="porc">
+                  <label for="rate">Interest Rate</label>
+                  <input type="number" id="rate" placeholder="%" step="0.01">
+                </div>
+
+              </div>
+      
+              <div class="radio-group">
+                  <label class="type">Mortgage Type</label>
+
+                  <div class="mort">
+                    <input type="radio" id="repayment" name="mortgageType" value="repayment" checked>
+                    <label for="repayment">Repayment</label>
+                  </div>
+
+                  <div class="rep">
+                    <input type="radio" id="interest-only" name="mortgageType" value="interest-only">
+                    <label for="interest-only">Interest Only</label>
+                  </div>
+
+              </div>
+      
+             
+                  
+                <button class="calculate" type="button" onclick="calculateRepayments()"> <img src="assets/images/icon-calculator.svg" alt="">Calculate Repayments</button>
+               
+             
+
+          </form>
+         </div>
+          <div class="results">
+            <img src="assets/images/illustration-empty.svg" alt="">
+              <h3>Results shown here</h3>
+              <p id="resultado">Complete the form and click "Calculate Repayments" to see what your monthly repayments would
+                be.</p>
+          </div>
+      <script src="index.js"></script>
+      </body>
+    </div>
+</html>
